@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digitalecybr - Nos Services</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        /* Additional CSS for form responsiveness and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff; /* Couleur blanche pour les liens */
+            text-decoration: none;
+        }
+
+        nav ul li a.active {
+            font-weight: bold;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 2px;
+            background: #fff;
+            margin: 4px 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        #services {
+            padding: 20px;
+        }
+
+        .service {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .service h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .service p {
+            color: #666;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                color: #fff; /* Couleur blanche pour les liens dans le menu hamburger */
+            }
+
+            #nav_check:checked ~ nav ul {
+                display: flex;
+            }
+
+            .service {
+                width: 80%;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">DIGITALCYBR</div>
+        <input type="checkbox" id="nav_check" hidden />
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <!-- Section Title for Web Development Services -->
+    <h1 class="section-title">Web Development Services</h1>
+    <!-- Explication des services du web dev -->
+    <section id="services">
+        <div class="service">
+            <h2>Création de Sites Web Personnalisés</h2>
+            <p>Nous concevons et développons des sites web sur mesure adaptés à vos besoins spécifiques, que ce soit pour un site vitrine, un blog ou un site e-commerce.</p>
+        </div>
+        <div class="service">
+            <h2>Optimisation pour les Moteurs de Recherche (SEO)</h2>
+            <p>Améliorez la visibilité de votre site sur les moteurs de recherche avec nos services SEO, incluant l'analyse des mots-clés, l'optimisation du contenu et bien plus encore.</p>
+        </div>
+        <div class="service">
+            <h2>Maintenance et Mise à Jour de Sites Web</h2>
+            <p>Assurez le bon fonctionnement et la sécurité de votre site avec nos services de maintenance régulière, incluant la correction des bugs et les mises à jour de sécurité.</p>
+        </div>
+    </section>
+    <!-- Form Section -->
+    <div class="form-container">
+        <h1>Contactez-nous</h1>
+        <form action="/submit" method="post">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required />
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Digitalecybr</h2>
+            </div>
+            <div class="footer-links">
+                <a href="#terms">Termes et Conditions</a>
+                <a href="#privacy">Politique de Confidentialité</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="https://www.twitter.com" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="https://www.instagram.com" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Digitalecybr. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Responsive Navbar using HTML & CSS</title>
+  </head>
+  <style>#about {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    color: #666;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.service {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.service p {
+    line-height: 1.6;
+}
+</style>
+  <body>
+    <!-- debut de la nav barr -->
+    <header>
+      <div class="logo">DIGITALCYBR</div>
+      <input type="checkbox" id="nav_check" hidden />
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About</a>
+          </li>
+
+          <li>
+            <a href="./services.html">Services</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <label for="nav_check" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </label>
+    </header>
+    <!-- fin de la nav barr -->
+     <!-- about -->
+     <section id="about">
+      <header>
+          <h2>À Propos de Digitalecybr</h2>
+      </header>
+      <div class="about-content">
+          <p>Bienvenue sur Digitalecybr, votre solution tout-en-un pour des services de design et de développement numérique de haute qualité. Nous nous engageons à offrir des solutions innovantes et créatives pour répondre à vos besoins spécifiques dans quatre domaines clés :</p>
+          <div class="services-list">
+              <div class="service">
+                  <h3>Développement Web</h3>
+                  <p>Nous créons des sites web modernes et fonctionnels, adaptés à vos besoins et à ceux de vos utilisateurs. Que vous ayez besoin d'un site vitrine, d'une boutique en ligne ou d'une application web complexe, notre équipe saura vous accompagner à chaque étape du projet.</p>
+              </div>
+              <div class="service">
+                  <h3>Design 3D</h3>
+                  <p>Nos experts en design 3D réalisent des modèles et des animations 3D de haute qualité. Nous travaillons sur des projets variés tels que des visualisations de produits, des animations pour des films ou des jeux vidéo, et bien plus encore.</p>
+              </div>
+              <div class="service">
+                  <h3>Design Graphique</h3>
+                  <p>Nous proposons des services de design graphique pour créer des visuels percutants et professionnels. Cela inclut la conception de logos, de matériel marketing, de brochures, et d'autres éléments visuels essentiels pour renforcer votre marque.</p>
+              </div>
+              <div class="service">
+                  <h3>Montage Vidéo</h3>
+                  <p>Nos services de montage vidéo comprennent la création de vidéos professionnelles à partir de séquences brutes. Nous réalisons des montages complets, des corrections de couleurs, et des créations d'intros et d'outros pour donner vie à vos projets vidéos.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Digitalecybr</h2>
+            </div>
+            <div class="footer-links">
+                <a href="#terms">Termes et Conditions</a>
+                <a href="#privacy">Politique de Confidentialité</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Digitalecybr. Tous droits réservés.</p>
+        </div>
+    </footer>
+  </body>
+</html>

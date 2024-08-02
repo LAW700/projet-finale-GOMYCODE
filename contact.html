@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Responsive Navbar using HTML & CSS</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #contact {
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .contact-info {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .contact-info h2,
+    .contact-info h3 {
+      color: #333;
+    }
+
+    .contact-info p {
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin-top: 0.5rem;
+    }
+
+    form input,
+    form textarea {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      padding: 0.5rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+    }
+
+    .contact-details,
+    .social-media {
+      margin-top: 2rem;
+    }
+
+    .social-media a {
+      display: inline-block;
+      margin-right: 1rem;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .social-media a:hover {
+      text-decoration: underline;
+    }
+
+    .map {
+      flex: 1;
+      max-width: 600px;
+      margin-top: 2rem;
+    }
+  </style>
+  <body>
+    <!-- debut de la nav barr -->
+
+    <header>
+      <div class="logo">DIGITALCYBR</div>
+      <input type="checkbox" id="nav_check" hidden />
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About</a>
+          </li>
+
+          <li>
+            <a href="./services.html">Services</a>
+          </li>
+          <li>
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <label for="nav_check" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </label>
+    </header>
+    <!-- fin de la nav barr -->
+    <!-- contact -->
+    <section id="contact">
+      <h2>Contactez-nous</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Formulaire de Contact</h3>
+          <p>
+            Pour toute question ou demande, veuillez remplir le formulaire
+            ci-dessous.
+          </p>
+
+          <form action="submit_form.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="subject">Objet :</label>
+            <input type="text" id="subject" name="subject" required />
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer</button>
+          </form>
+
+          <div class="contact-details">
+            <h3>Informations de Contact Directes</h3>
+            <p>
+              Email :
+              <a href="mailto:contact@digitalecybr.com"
+                >digitalecybr@gmail.com</a
+              >
+            </p>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- Footer -->
+        <footer>
+          <div class="footer-container">
+              <div class="footer-logo">
+                  <h2>Digitalecybr</h2>
+              </div>
+              <div class="footer-links">
+                  <a href="#terms">Termes et Conditions</a>
+                  <a href="#privacy">Politique de Confidentialité</a>
+                  <a href="./contact.html">Contact</a>
+              </div>
+              <div class="footer-social">
+                  <a href="https://www.facebook.com" target="_blank">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.twitter.com" target="_blank">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>&copy; 2024 Digitalecybr. Tous droits réservés.</p>
+          </div>
+  </body>
+</html>
